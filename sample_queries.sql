@@ -39,7 +39,7 @@ Alter Column Publishername Varchar(50) Foreign Key References Publisher(Name) No
 
 
 /*
-Question 1: How many copies of the book titled The Lost Tribe are owned by the library branch whose name
+Query 1: How many copies of the book titled The Lost Tribe are owned by the library branch whose name
 is"Sharpstown"?
 */
 
@@ -52,7 +52,7 @@ Where Title = 'The Lost Tribe' AND BranchName = 'Sharpstown'
 
 
 /*
-Question 2:  How many copies of the book titled The Lost Tribe are owned by each library branch?
+Query 2:  How many copies of the book titled The Lost Tribe are owned by each library branch?
 */
 
 Select Title, BranchName, No_Of_Copies
@@ -64,7 +64,7 @@ Where Title = 'The Lost Tribe'
 
 
 /*
-Question 3:  Retrieve the names of all borrowers who do not have any books checked out.
+Query 3:  Retrieve the names of all borrowers who do not have any books checked out.
 */
 
 SELECT Name, Address
@@ -74,7 +74,7 @@ WHERE BL.CardNo IS NULL
 
 
 /*
-Question 4: For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today,
+Query 4: For each book that is loaned out from the "Sharpstown" branch and whose DueDate is today,
 retrieve the book title, the borrower's name, and the borrower's address.
 */
 
@@ -90,7 +90,7 @@ AND DueDate = 060615
 
 
 /*
-Question 5:  For each library branch, retrieve the branch name and the total number of books loaned out from
+Query 5:  For each library branch, retrieve the branch name and the total number of books loaned out from
 that branch.
 */
 
@@ -105,7 +105,7 @@ Group By BranchName
 
 
 /*
-Question 6: Retrieve the names, addresses, and number of books checked out for all borrowers who have more
+Query 6: Retrieve the names, addresses, and number of books checked out for all borrowers who have more
 than five books checked out.
 */
 
